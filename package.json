@@ -4,7 +4,7 @@
   "homepage": "https://liamtodd.dev",
   "scripts": {
     "dev": "vite",
-    "predeploy": "vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
