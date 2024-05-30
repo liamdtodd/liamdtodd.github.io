@@ -1,55 +1,69 @@
 export default function Projects() {
     return (
         <>
-            <div className="api-container project-container">
-                <h1>RESTful API</h1>
-                <img src="https://blog.postman.com/wp-content/uploads/2020/07/API-101-What-Is-a-REST-API-scaled.jpg" alt="REST diagram" />
-                <p>
-                    I constructed different enpoints for two different entities that had access
-                    to 5 different HTTP requests: GET, POST, PUT, PATCH, and DELETE.
-                </p>
-                <p>
-                    Additionally, I implemented user authentication via JWTs and Auth0.
-                </p>
+            <div className="projects-container">
+                <div className="project-item">
+                    <div className="project-title detail">
+                        <h1>NASA Web App</h1>
+                    </div>
+                    <div className="project-tech detail">
+                        <h2>Technology</h2>
+                        <img src="../atom.png" alt="react" />
+                    </div>
+                    <div className="project-summary detail">
+                        <h2>Key Concepts</h2>
+                        <ul>Fetching data from NASA API</ul>
+                        <ul>Styling with Emotion CSS</ul>
+                        <ul>React components, hooks, state</ul>
+                    </div>
+                    <div className="project-link detail">
+                        <h2>Link</h2>
+                        <a href="https://visionary-mooncake-7b36e3.netlify.app/" target="_blank">Visit Site!</a>
+                    </div>
+                </div>
 
-                <h4>Tech used:</h4>
-                <p>NodeJS</p>
-                <p>Google Cloud Platform</p>
+                <div className="project-item">
+                <div className="project-title detail">
+                        <h1>Weather Web App</h1>
+                    </div>
+                    <div className="project-tech detail">
+                        <h2>Technology</h2>
+                        <img src="../atom.png" alt="react" />
+                    </div>
+                    <div className="project-summary detail">
+                    <h2>Key Concepts</h2>
+                        <ul>Fetching data from OpenWeather API</ul>
+                        <ul>Styling with Emotion CSS</ul>
+                        <ul>React components, hooks, state</ul>
+                    </div>
+                    <div className="project-link detail">
+                        <h2>Link</h2>
+                        <a href="https://lambent-cannoli-594184.netlify.app/" target="_blank">Visit Site!</a>
+                    </div>
+                </div>
 
-                <h2><a href="https://github.com/liamdtodd/RESTful_API" target="_blank">GitHub Repo</a></h2>
-            </div>
-
-            <div className="nasa-container project-container">
-                <h1>Web App w/ NASA API</h1>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" alt="NASA logo" />
-                <p>With my partner, we created an app that used various different parts of NASA's API.</p>
-                <p>
-                    We made several different calls to the API, with user input as paramters, and displayed
-                    the data in a clean, appealing way.
-                </p>
-
-                
-                <h4>Tech used:</h4>
-                <p>React</p>
-                <p>Emotion Styling</p>
-                <p>Tanstack Query API calls</p>
-
-                <h2><a href="https://github.com/osu-cs494-w24/final-project-team-23" target="_blank">GitHub Repo</a></h2>
-            </div>
-
-            <div className="crud-container project-container">
-                <h1>Database Management - CRUD</h1>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmw39OaGeIiR2_yKnSCUFX3ypmYqm9ML9zfqCJOC_HGYKvMRgozYve-DWBnH6Vp5F_JF0IKrCESW-Jj7Agx78K9EW3y9FfBsHgpK72zDYQQaWjFG70m47eHJi44SuqGl3Sj92lKs4Uwtgr/s1600/crud.jpg" alt="CRUD" />
-                <p>With my partner, we created a CRUD-based app that focused on database management and manipulation</p>
-                <p>
-                    In order to do so, we had a simple UI that would take input and data from
-                    the user to make corresponding database queries.
-                </p>
-
-                <h4>Tech used:</h4>
-                <p>NodeJS</p>
-                <p>MySQL</p>
-                <h2><a href="https://github.com/liamdtodd/Fitness-Web-App" target="_blank">GitHub Repo</a></h2>
+                <div className="project-item">
+                    <div className="project-title detail">
+                        <h1>RESTful API</h1>
+                    </div>
+                    <div className="project-tech detail">
+                        <h2>Technology</h2>
+                        <img src="../node-js.png" alt="node" />
+                        <img src="../google.png" alt="google cloud" />
+                    </div>
+                    <div className="project-summary detail">
+                        <h2>Key Concepts</h2>
+                        <ul>CRUD implementation for database entities</ul>
+                        <ul>GET, POST, PUT, PATCH, DELETE routes</ul>
+                        <ul>Success codes: 200, 201, 204</ul>
+                        <ul>Failure codes: 400, 401, 403, 404, 406, 415</ul>
+                    </div>
+                    <div className="project-link detail">
+                        <h2>Link</h2>
+                        <a href="https://final-toddl.uw.r.appspot.com/users/userInfo">Get API key and test!</a>
+                        <a href="../toddl_project.pdf" target="_blank">View API documentation!</a>
+                    </div>
+                </div>
             </div>
         </>
     )
