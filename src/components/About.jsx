@@ -36,8 +36,8 @@ export default function About() {
                             <img src="../PortraitPhoto.jpg" alt="portrait" />
                         </div>
                         <div className="socials-container">
-                            <img src="../github.png" alt="github" />
-                            <img src="../linkedin.png" alt="linkedin" />
+                            <a href="https://github.com/liamdtodd" target="_blank"><img src="../github.png" alt="github" /></a>
+                            <a href="https://www.linkedin.com/in/liam-todd/" target="_blank"><img src="../linkedin.png" alt="linkedin" /></a>
                         </div>
                     </div>
                 </div>
