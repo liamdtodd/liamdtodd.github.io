@@ -79,11 +79,11 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    margin-block: 2rem;
 
     img {
         max-height: 50px;
         width: auto;
+        margin: 1rem;
     }
 }
 
@@ -148,6 +148,7 @@ body {
 
     margin-inline: 2rem;
     margin-block: 3rem;
+    isolation: isolate;
     width: 90%;
 
     border-radius: 20px;
@@ -164,6 +165,12 @@ body {
 .project-title {
     display: flex;
     align-items: center;
+
+    img {
+        max-height: 100px;
+        width: auto;
+        margin-inline: 1rem;
+    }
 }
 
 .project-tech {
@@ -183,4 +190,63 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.resume-container {
+    position: relative;
+    height: 80rem;
+
+    background-color: hsl(0, 0%, 80%);
+}
+
+.capturedsun-card {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    left: 100px;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    width: 60%;
+    height: 40%;
+    padding: 1.5rem;
+}
+
+.osu-card {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 100px;
+    right: 100px;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    width: 60%;
+    height: 40%;
+    padding: 1.5rem;
+}
+
+.resume-left-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.resume-right-container {
+
+    img {
+        max-height: 150px;
+        width: auto;
+    }
 }
