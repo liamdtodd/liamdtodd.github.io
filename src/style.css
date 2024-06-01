@@ -26,15 +26,39 @@ body {
     border-bottom: 2px solid grey;
 }
 
+.header-container h1 {
+    font-size: 2.5em;
+}
+
+.header-container h2 {
+    font-weight: 600;
+    font-size: 2em;
+    width: 4em;
+    padding: 0;
+}
+
+.header-container h1,
+.header-container h2 {
+    transition: color 0.5s ease;
+    &:hover {
+        font-style: italic;
+        color: rgb(0,0,128);
+        cursor: pointer;
+    }
+}
+
 .nav {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-inline: 2.5rem;
 }
@@ -44,8 +68,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    isolation: isolate;
 
     background-color: hsl(0, 0%, 90%);
+}
+
+.about-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, hsl(0, 0%, 90%), hsl(0, 0%, 85%));
 }
 
 .outer-card-container {
@@ -197,6 +233,17 @@ body {
     height: 80rem;
 
     background-color: hsl(0, 0%, 80%);
+}
+
+.resume-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, hsl(0, 0%, 85%), hsl(0, 0%, 80%));
 }
 
 .capturedsun-card {
