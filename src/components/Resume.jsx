@@ -1,7 +1,18 @@
-export default function Resume() {
+import { useRef, forwardRef, useImperativeHandle } from "react"
+
+const Resume = forwardRef((props, ref) => {
+    const localRef = useRef(null);
+
+    useImperativeHandle(ref, () => ({
+        scrollIntoView: () => {
+            if (localRef.current)
+                localRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+    }));
+
     return (
         <>
-            <div className="resume-container">
+            <div ref={localRef} className="resume-container">
                 <div className="capturedsun-card">
                     <div className="resume-left-container">
                         <h1>SWE Intern - Captured Sun</h1>
@@ -70,4 +81,6 @@ export default function Resume() {
             </div>
         </>
     )
-}
+});
+
+export default Resume;

@@ -1,7 +1,18 @@
-export default function Projects() {
+import { useRef, forwardRef, useImperativeHandle } from "react"
+
+const Projects = forwardRef((props, ref) => {
+    const localRef = useRef(null);
+
+    useImperativeHandle(ref, () => ({
+        scrollIntoView: () => {
+            if (localRef.current)
+                localRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+    }));
+
     return (
         <>
-            <div className="projects-container">
+            <div ref={localRef} className="projects-container">
                 <div className="project-item">
                     <div className="project-title detail">
                         <h1>NASA Web App</h1>
@@ -72,4 +83,6 @@ export default function Projects() {
             </div>
         </>
     )
-}
+});
+
+export default Projects;
