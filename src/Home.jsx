@@ -1,17 +1,17 @@
 import { useRef } from "react";
 
-import Resume from "./components/Resume";
-import Projects from "./components/Projects";
 import About from "./components/About";
+import './styles/home.css';
 
 export default function Home() {
-    const projectsRef = useRef(null);
-    const resumeRef = useRef(null);
-    const contactRef = useRef(null);
 
     return (
         <>
-           
+            <div className="header-container" id="home">
+                <h1>Hello, my name is Liam</h1>
+            </div>
+
+            <About />
         </>
     )
 }
